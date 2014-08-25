@@ -11,16 +11,20 @@ Sai.on("jserror", function(err){
 
   var cached = false;
 
-  if (win._gat && win._gat._getTracker) { // version too old.
+  var _gat = win._gat;
+  var _gaq = win._gaq;
+  var ga = win.ga;
 
-  } else if (win._gaq && win._gaq.push) { // old version.
+  if (_gat && _gat._getTracker) { // version too old.
 
-    win._gaq.push(['_trackEvent', category, action, label]);
+  } else if (_gaq && typeof _gaq.push === "function") { // old version.
+
+    _gaq.push(['_trackEvent', category, action, label]);
     cached = true;
 
-  } else if ("function" === typeof win.ga) { // universal analytics.
+  } else if ("function" === typeof ga) { // universal analytics.
 
-    win.ga('send', 'event', category, action, label)
+    ga('send', 'event', category, action, label)
     cached = true;
 
   }
