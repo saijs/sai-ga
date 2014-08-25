@@ -2,7 +2,12 @@
   "name": "sai-ga",
   "version": "0.1.0",
   "description": "Catch Exception via Sai, and Analytics Data by Google.",
-  "keywords": ["Sai", "Google", "Analytics", "ga"],
+  "keywords": [
+    "Sai",
+    "Google",
+    "Analytics",
+    "ga"
+  ],
   "homepage": "https://github.com/saijs/sai-ga",
   "author": "",
   "repository": {
@@ -19,7 +24,9 @@
       "sai": "3.0.0"
     },
     "devDependencies": {
-      "expect.js": "0.3.1"
+      "expect.js": "0.3.1",
+      "imagic": "1.2.0",
+      "url": "1.2.0"
     }
   }
 }

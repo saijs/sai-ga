@@ -1,4 +1,4 @@
-# Demo
+# Universal Analytics Demo
 
 ---
 
@@ -16,7 +16,6 @@ if (!window.ga) {
 }
 </script>
 
-## Normal usage
 
 ````javascript
 seajs.use(['sai', 'index'], function(Sai, saiGa) {
