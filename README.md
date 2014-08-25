@@ -1,4 +1,4 @@
-# sai-ga [![spm version](http://spmjs.io/badge/sai-ga)](http://spmjs.io/package/sai-ga)
+# sai-ga [![spm version](http://spmjs.io/badge/sai-ga)](http://spmjs.io/package/sai-ga) [![Build Status](https://travis-ci.org/saijs/sai-ga.svg)](https://travis-ci.org/saijs/sai-ga) [![Coverage Status](https://coveralls.io/repos/saijs/sai-ga/badge.png)](https://coveralls.io/r/saijs/sai-ga)
 
 ---
 
