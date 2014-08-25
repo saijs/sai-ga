@@ -3,7 +3,7 @@ var Sai = require("sai");
 
 var win = window;
 
-Sai.on("jserror", function(err){
+ Sai.on("jserror", function(err){
 
   var category = "jserror"
   var action = err.msg;
@@ -24,7 +24,12 @@ Sai.on("jserror", function(err){
 
   } else if ("function" === typeof ga) { // universal analytics.
 
-    ga('send', 'event', category, action, label)
+    //ga('send', 'event', category, action, label);
+    ga('send', 'exception', {
+      'exDescription': action,
+      'exFatal': false
+    });
+
     cached = true;
 
   }
