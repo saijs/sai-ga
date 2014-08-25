@@ -15,14 +15,7 @@ var win = window;
   var _gaq = win._gaq;
   var ga = win.ga;
 
-  if (_gat && _gat._getTracker) { // version too old.
-
-  } else if (_gaq && typeof _gaq.push === "function") { // old version.
-
-    _gaq.push(['_trackEvent', category, action, label]);
-    cached = true;
-
-  } else if ("function" === typeof ga) { // universal analytics.
+  if ("function" === typeof ga) { // universal analytics.
 
     //ga('send', 'event', category, action, label);
     ga('send', 'exception', {
@@ -31,6 +24,13 @@ var win = window;
     });
 
     cached = true;
+
+  } else if (_gaq && typeof _gaq.push === "function") { // old version.
+
+    _gaq.push(['_trackEvent', category, action, label]);
+    cached = true;
+
+  } else if (_gat && _gat._getTracker) { // too old version.
 
   }
 
