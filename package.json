@@ -21,7 +21,8 @@
   "spm": {
     "main": "index.js",
     "dependencies": {
-      "sai": "3.0.0"
+      "sai": "3.0.0",
+      "imagic": "1.3.0"
     },
     "devDependencies": {
       "expect.js": "0.3.1",
